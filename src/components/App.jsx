@@ -25,11 +25,14 @@ export const App = () => {
     }
   };
 
+  const html = document.querySelector('html');
   const showLargeImage = picture => {
+    html.style.overflow = 'hidden';
     setLargeImage(picture);
   };
 
   const closeModal = () => {
+    html.style.overflow = '';
     setLargeImage(null);
   };
 
